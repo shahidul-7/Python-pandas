@@ -12,11 +12,11 @@ def translator(word):
     else:
         if word not in data:
             close_words = get_close_matches(word, data, n=1)
-            ask_for_close_words = input(f"Did your mean {close_words[0]} instead? Input 'y' if Yes or 'n' if No: ")
+            ask_for_close_words = input(f"Did your mean '{close_words}' instead? Input 'y' if Yes or 'n' if No: ")
             if close_words:
-                if ask_for_close_words == ask_for_close_words:
+                if ask_for_close_words == "y":
                     return data[close_words[0]]
-                elif ask_for_close_words == False:
+                elif ask_for_close_words == "n":
                     return "Please try with another word"
                 else:
                     return "Sorry, you have inserted wrong words!"
