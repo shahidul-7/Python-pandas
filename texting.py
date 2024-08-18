@@ -1,11 +1,8 @@
-import pandas as pd
-
-# Sample DataFrame
-df = pd.DataFrame({
-    'A': [1, 2, 3],
-    'B': [4, 5, 6],
-    'C': [7, 8, 9]
-})
-
-# Dropping a single column
-df = df.drop('B', axis=1)
+def division(a, b):
+     try:
+          return a/b
+     except:
+          return "Sorry, It's not dividable!"
+     
+user_input = int(input("Please enter a nuber to be divided with 50: "))
+print(f"{user_input}/50 = ", division(50,user_input))
